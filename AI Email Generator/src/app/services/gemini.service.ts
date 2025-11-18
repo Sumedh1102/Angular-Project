@@ -9,7 +9,7 @@ import { environment } from '../../environments/environment';
 export class GeminiService {
 
   private apiUrl =
-    'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent';
+    'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent';
 
   private apiKey = environment.GEMINI_API_KEY;
 
