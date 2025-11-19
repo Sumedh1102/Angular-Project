@@ -1,0 +1,32 @@
+# Angular build output
+/dist
+/out-tsc
+
+# Angular cache
+/.angular/cache
+
+# Node modules
+node_modules/
+
+# Environment files (ignore all environments)
+src/environments/environment.ts
+src/environments/environment.prod.ts
+src/environments/*.env
+
+# Mac system files
+.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE files
+.vscode/
+.idea/
+
+# Optional: Ignore environment variables for backend
+.env
+.env.local
+.env.*.local

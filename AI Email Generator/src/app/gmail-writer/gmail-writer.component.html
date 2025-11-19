@@ -1,34 +1,47 @@
-<div class="min-h-screen flex flex-col items-center justify-center px-5 py-10 bg-gradient-to-b from-purple-100 via-gray-50 to-red-50">
+<div class="relative min-h-screen flex flex-col items-center justify-center px-5 py-10 overflow-hidden">
+
+  <!-- Background Image -->
+  <img src="https://i.postimg.cc/vZfn9dFt/52aa450fa4b23034a3ebe4845def96a7.jpg" 
+       alt="Background" 
+       class="absolute inset-0 w-full h-full object-cover opacity-100 -z-10">
+
   <!-- Logo -->
-  <div class="flex items-center gap-2 mb-5 bg-white rounded-3xl h-32 w-40 shadow-lg">
-    <img src="https://i.postimg.cc/52km0zF6/image-Photoroom-(26).png" alt="Logo" class="h-32 w-32 translate-x-4">
+  <div class="flex items-center h-60 w-60">
+    <img src="https://i.postimg.cc/tJk4jyfX/image.png" alt="Logo" class="h-60 w-60 translate-x-4">
   </div>
 
   <!-- Main Title -->
-  <h1 class="text-6xl lg:text-7xl font-semibold text-black text-center mb-10 tracking-tight leading-tight">
+  <h1 class="text-6xl lg:text-6xl font-semibold vend-sans text-white text-center mb-10 tracking-tight leading-tight">
     AI Gmail Content Writer
   </h1>
 
-  <!-- Email Description Input Container -->
-  <div class="relative w-full max-w-3xl bg-white bg-opacity-95 backdrop-blur-xl rounded-3xl flex flex-col px-6 py-5 gap-4 shadow-lg shadow-black/5 border border-black/5 mb-6">
-    <!-- Label -->
-    <label class="text-sm font-medium text-gray-700">Describe your email:</label>
-    
-    <!-- Textarea -->
-    <textarea 
-      [(ngModel)]="description" 
-      rows="5" 
-      class="w-full bg-transparent border border-gray-200 rounded-2xl outline-none text-base text-black placeholder-gray-400 px-4 py-3 resize-none focus:border-black focus:ring-2 focus:ring-black focus:ring-opacity-5 transition-all"
-      placeholder="Explain what this email should convey..."
-    ></textarea>
+  <!-- Glowing Gradient Border Wrapper -->
+  <div class="relative group cursor-pointer w-full max-w-3xl mb-6">
+    <div
+      class="absolute -inset-1 bg-gradient-to-r from-red-600 to-violet-600 rounded-3xl blur opacity-25 group-hover:opacity-100 transition duration-1000 group-hover:duration-200">
+    </div>
 
-    <!-- Generate Button -->
-    <button 
-      (click)="createEmail()"
-      class="w-full h-14 rounded-full bg-black text-white font-medium hover:scale-[1.02] transition-transform shadow-md hover:shadow-lg"
-    >
-      Generate Email
-    </button>
+    <!-- Email Description Input Container -->
+    <div
+      class="relative w-full bg-white bg-opacity-95 backdrop-blur-xl rounded-3xl flex flex-col px-6 py-5 gap-4 shadow-lg shadow-black/5 border border-black/5">
+  
+      <!-- Textarea -->
+      <textarea 
+        [(ngModel)]="description" 
+        rows="5" 
+        class="w-full bg-transparent border border-gray-200 rounded-2xl outline-none text-base text-black placeholder-gray-400 px-4 py-3 resize-none focus:ring-2 focus:ring-black focus:ring-opacity-5 transition-all"
+        placeholder="Explain what this email should convey..."
+      ></textarea>
+
+      <!-- Generate Button -->
+      <button 
+        (click)="createEmail()"
+        class="w-full h-14 rounded-full bg-black text-white font-medium hover:scale-[1.02] transition-transform shadow-md hover:shadow-lg"
+      >
+        Generate Email
+      </button>
+
+    </div>
   </div>
 
   <!-- Loading State -->
